@@ -1,0 +1,2 @@
+# browser-localStorage
+package localStorage
