@@ -1,14 +1,12 @@
 module.exports = {
-	extends: ['@fizzmod/eslint-config', 'prettier'],
+	extends: ['prettier'],
 	plugins: ['babel', 'prettier', 'jest'],
 	parser: 'babel-eslint',
 	rules: {
 		'prettier/prettier': 'error',
 		'import/no-named-as-default': 0,
 	},
-	env: {
-		'jest/globals': true,
-	},
+	env: {},
 	settings: {
 		'import/resolver': {
 			node: {
