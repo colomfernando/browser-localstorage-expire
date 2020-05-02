@@ -1,0 +1,24 @@
+{
+  "name": "browser-localstorage",
+  "version": "1.0.0",
+  "description": "package for manage localstorage browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colomfernando/browser-localstorage.git"
+  },
+  "keywords": [
+    "browser",
+    "localstorage",
+    "cache"
+  ],
+  "author": "Fernando Colom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colomfernando/browser-localstorage/issues"
+  },
+  "homepage": "https://github.com/colomfernando/browser-localstorage#readme"
+}
