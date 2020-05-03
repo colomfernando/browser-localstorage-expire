@@ -31,3 +31,16 @@ export const validateString = (str = '') => !!(typeof str === 'string' && str);
 export const isRequired = (param = 'param') => {
 	throw new Error(`${param} is required`);
 };
+
+/**
+ * @name invalidType
+ * @private
+ * @description return message error on arg required
+ * @param {string} param arg
+ * @param {string} type type of arguments
+ * @example validType('storename', 'string')
+ * @returns 'param must by a valid string'
+ */
+export const invalidType = (param = 'param', type = isRequired('type')) => {
+	throw new Error(`${param} must be a valid ${type}`);
+};

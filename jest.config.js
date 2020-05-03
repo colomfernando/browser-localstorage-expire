@@ -5,7 +5,7 @@ module.exports = {
 	testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)'],
 	testPathIgnorePatterns: ['\\\\node_modules\\\\'],
 	transformIgnorePatterns: ['<rootDir>/node_modules/'],
-	verbose: false,
+	verbose: true,
 	collectCoverage: true,
 	coverageDirectory: 'coverage',
 	collectCoverageFrom: ['src/**/*.{js, json}'],
