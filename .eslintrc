@@ -1,0 +1,25 @@
+{
+	"extends": ["airbnb-base", "prettier"],
+	"plugins": ["prettier", "jest"],
+	"parser": "babel-eslint",
+	"rules": {
+		"prettier/prettier": "error"
+	},
+	"env": {
+		"node": true,
+		"commonjs": true,
+		"es6": true,
+		"jest": true
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".json"],
+				"moduleDirectory": ["node_modules", "src"]
+			}
+		}
+	},
+	"globals": {
+		"localStorage": true
+	}
+}
