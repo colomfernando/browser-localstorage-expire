@@ -11,13 +11,5 @@ module.exports = {
 	collectCoverageFrom: ['src/**/*.{js, json}'],
 	coveragePathIgnorePatterns: ['/node_modules/', '/test/'],
 	coverageReporters: ['text', 'html'],
-	coverageThreshold: {
-		global: {
-			branches: 0,
-			functions: 2,
-			lines: 2,
-			statements: 2,
-		},
-	},
 	setupFiles: ['jest-localstorage-mock'],
 };
