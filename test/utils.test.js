@@ -1,4 +1,4 @@
-import { validateNumber, validateString } from '../src/utils';
+import { validateNumber, validateString, isRequired } from '../src/utils';
 
 describe('utils::validateNumber', () => {
 	test('should return false with string', () => {
@@ -34,5 +34,12 @@ describe('utils::validateString', () => {
 	});
 	test('should return true', () => {
 		expect(validateString('test')).toBe(true);
+	});
+});
+
+describe('utils::isRequired', () => {
+	test('throw error', () => {
+		const error = () => isRequired('number');
+		expect(error).toThrowError('number is required');
 	});
 });

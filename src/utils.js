@@ -19,3 +19,15 @@ export const validateNumber = (num) =>
  * @example validateString('fizzmod') // true
  */
 export const validateString = (str = '') => !!(typeof str === 'string' && str);
+
+/**
+ * @name isRequired
+ * @private
+ * @description return message error on arg required
+ * @param {string} name arg
+ * @example (param = isRequired('param')) => {}
+ * @returns 'param is required'
+ */
+export const isRequired = (param = 'param') => {
+	throw new Error(`${param} is required`);
+};
