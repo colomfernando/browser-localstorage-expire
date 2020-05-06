@@ -10,8 +10,8 @@ import { validateString, isRequired, invalidType } from './utils';
  */
 
 const getItem = (name = isRequired('name localstorage')) => {
-	const itemStr = localStorage.getItem(name);
 	if (!validateString(name)) invalidType('name', 'string');
+	const itemStr = localStorage.getItem(name);
 	if (!itemStr) {
 		return null;
 	}
