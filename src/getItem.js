@@ -5,7 +5,7 @@ import { validateString, isRequired, invalidType } from './utils';
  * @private
  * @param {string} name name key for localstorage
  * @description function for get data in localstorage
- * @example setItem() // 		getItem('vtex-installments') // [{ visa: 2 }]
+ * @example setItem() // 		getItem('data') // [{ visa: 2 }]
  * @returns data from localstorage
  */
 
