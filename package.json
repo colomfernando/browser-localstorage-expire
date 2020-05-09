@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
+		"build-docs": "jsdoc2md --template README.hbs --files src/*.js > README.md",
 		"deploy": "npm test",
 		"lint": "lint-staged"
 	},
