@@ -4,6 +4,13 @@ node_js:
 cache:
   directories:
     - 'node_modules'
-branches:
-  only:
-    - master
+jobs:
+  include:
+    - stage: test
+    echo: run test
+    script: npm test
+    - stage: deploy
+    on:
+      branch: master
+    echo: run deploy
+    script: dnpm run deploy

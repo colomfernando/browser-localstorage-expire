@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
+		"deploy": "npm test",
 		"lint": "lint-staged"
 	},
 	"husky": {
