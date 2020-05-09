@@ -10,7 +10,7 @@ jobs:
       name: Unit test
       if: branch = QA
       script:
-        - echo stage deploy
+        - echo stage test
         - npm test
     - stage: deploy
       name: Deploy to npm
