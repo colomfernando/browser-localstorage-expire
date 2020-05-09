@@ -7,10 +7,12 @@ cache:
 jobs:
   include:
     - stage: test
-    echo: run test
-    script: npm test
+    script:
+      - echo "stage test"
+      - npm test
     - stage: deploy
     on:
       branch: master
-    echo: run deploy
-    script: dnpm run deploy
+    script:
+      - echo "stage deploy"
+      - npm test
