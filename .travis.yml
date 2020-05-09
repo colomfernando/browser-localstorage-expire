@@ -9,10 +9,12 @@ jobs:
     - stage: test
       name: Unit test
       if: branch = QA
-      script: echo stage test
-      script: npm test
+      script:
+        - echo stage deploy
+        - npm test
     - stage: deploy
       name: Deploy to npm
       if: branch = master
-      script: echo stage deploy
-      script: npm test
+      script:
+        - echo stage deploy
+        - npm test
