@@ -14,7 +14,7 @@ function for manage cache from localstorage with expiration
 **Returns**: function get and set  
 **Example**  
 ```js
-const localCache = browserLocalstorage('data');
+const localCache = browserLocalstorage();
 ```
 
 * [browserLocalstorage](#module_browserLocalstorage) ⇒
@@ -35,7 +35,7 @@ function for get data in localstorage
 
 **Example**  
 ```js
-setItem() // 		getItem('data') // [{ visa: 2 }]
+setItem() // 		getItem('data') // [{ country: 2 }]
 ```
 <a name="module_browserLocalstorage..setItem"></a>
 
@@ -52,5 +52,5 @@ function for save data in localstorage
 
 **Example**  
 ```js
-setItem() // 		setItem('data', [{ visa: 2 }], 50000);
+setItem() // 		setItem('data', [{ country: 2 }], 50000);
 ```
