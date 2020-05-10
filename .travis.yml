@@ -16,5 +16,5 @@ jobs:
       name: Deploy to npm
       if: branch = master
       script:
-        - echo stage deploy
         - npm test
+        - npm build
