@@ -4,6 +4,17 @@ node_js:
 cache:
   directories:
     - 'node_modules'
-branches:
-  only:
-    - master
+jobs:
+  include:
+    - stage: test
+      name: Unit test
+      if: branch = QA
+      script:
+        - echo stage test
+        - npm test
+    - stage: deploy
+      name: Deploy to npm
+      if: branch = master
+      script:
+        - echo stage deploy
+        - npm test

@@ -16,7 +16,7 @@ export const validateNumber = (num) =>
  * @description return if arg is a valid string
  * @param {string} string
  * @example validateString('') // false
- * @example validateString('fizzmod') // true
+ * @example validateString('test') // true
  */
 export const validateString = (str = '') => !!(typeof str === 'string' && str);
 
@@ -38,7 +38,7 @@ export const isRequired = (param = 'param') => {
  * @description return message error on arg required
  * @param {string} param arg
  * @param {string} type type of arguments
- * @example validType('storename', 'string')
+ * @example validType('test', 'string')
  * @returns 'param must by a valid string'
  */
 export const invalidType = (param = 'param', type = isRequired('type')) => {
