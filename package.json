@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "jest",
 		"build-docs": "jsdoc2md --template README.hbs --files src/*.js > README.md",
-		"deploy": "npm test",
+		"build": "rollup -c",
 		"lint": "lint-staged"
 	},
 	"husky": {
