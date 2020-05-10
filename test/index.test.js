@@ -9,31 +9,20 @@ describe('cache function', () => {
 			getTime: () => 1585689827,
 		}));
 	});
-	describe('error', () => {
-		test('return error', () => {
-			const error = () => browserLocalstorage();
-			expect(error).toThrowError('name localStorage is required');
-		});
-		test('return error with wrong arg', () => {
-			const error = () => browserLocalstorage([1]);
-			expect(error).toThrowError('key must be a valid string');
-		});
-	});
-
-	describe('cache', () => {
+	describe('browserLocalstorage', () => {
 		test('function instance', () => {
-			const localCache = browserLocalstorage('vtex');
-			expect(localCache.set).toBeDefined();
-			expect(localCache.get).toBeDefined();
-			expect(localCache.set).toBeInstanceOf(Function);
-			expect(localCache.get).toBeInstanceOf(Function);
+			const localCache = browserLocalstorage();
+			expect(localCache.setItem).toBeDefined();
+			expect(localCache.getItem).toBeDefined();
+			expect(localCache.setItem).toBeInstanceOf(Function);
+			expect(localCache.getItem).toBeInstanceOf(Function);
 		});
 	});
-	describe('cache setter and getter', () => {
+	describe('browserLocalstorage setter and getter', () => {
 		test('setter', () => {
 			const name = 'vtex';
-			const localCache = browserLocalstorage(name);
-			localCache.set({ name: 1, lastName: 2 });
+			const localCache = browserLocalstorage();
+			localCache.setItem(name, { name: 1, lastName: 2 });
 			expect(localStorage.__STORE__[name]).toEqual(
 				'{"value":{"name":1,"lastName":2},"expiry":1585989827}'
 			);
@@ -41,9 +30,9 @@ describe('cache function', () => {
 
 		test('getter', () => {
 			const name = 'vtex';
-			const localCache = browserLocalstorage(name);
+			const localCache = browserLocalstorage();
 			localStorage.setItem(name, JSON.stringify({ expiry: 1585688410, value: [{ visa: 2 }] }));
-			const response = localCache.get();
+			const response = localCache.getItem(name);
 			expect(response).toBe(null);
 		});
 	});
