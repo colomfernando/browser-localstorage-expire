@@ -3,6 +3,8 @@
 [![Build
 Status](https://travis-ci.com/colomfernando/browser-localstorage.svg?branch=master)](https://travis-ci.com/colomfernando/browser-localstorage)
 
+https://img.shields.io/npm/v/browser-localstorage-expire
+
 package localStorage
 
 
