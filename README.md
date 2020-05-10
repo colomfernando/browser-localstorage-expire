@@ -48,9 +48,9 @@ function for save data in localstorage
 | --- | --- | --- | --- |
 | name | <code>string</code> |  | name key for localstorage |
 | value | <code>number</code> |  | data to save in localstorage |
-| [expiry] | <code>number</code> | <code>300000</code> | time of expiration |
+| [expiry] | <code>number</code> | <code>5</code> | time of expiration in minutes |
 
 **Example**  
 ```js
-setItem() // 		setItem('data', [{ country: 2 }], 50000);
+setItem() // 		setItem('data', [{ country: 2 }], 5);
 ```
