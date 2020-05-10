@@ -14,7 +14,7 @@ const browserLocalstorage = () => {
 		 * @name getItem
 		 * @param {string} name name key for localstorage
 		 * @description function for get data in localstorage
-		 * @example setItem() // 		getItem('data') // [{ country: 2 }]
+		 * @example setItem('data')
 		 * @returns data from localstorage
 		 */
 		getItem,
@@ -24,7 +24,7 @@ const browserLocalstorage = () => {
 		 * @param {number} value - data to save in localstorage
 		 * @param {number} [expiry = 5] - time of expiration in minutes
 		 * @description function for save data in localstorage
-		 * @example setItem() // 		setItem('data', [{ country: 2 }], 5);
+		 * @example setItem('data', [{ country: 2 }], 5);
 		 */
 		setItem,
 	};
