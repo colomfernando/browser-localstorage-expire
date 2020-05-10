@@ -41,6 +41,19 @@ export const isRequired = (param = 'param') => {
  * @example validType('test', 'string')
  * @returns 'param must by a valid string'
  */
-export const invalidType = (param = 'param', type = isRequired('type')) => {
+export const invalidType = (param = 'param', type = 'type') => {
 	throw new Error(`${param} must be a valid ${type}`);
+};
+
+/**
+ * @name minutesToMiliseconds
+ * @param {number} [minutes = 5]
+ * @private
+ * @description convert minutes to miliseconds
+ * @example minutesToMiliseconds(10) // 600000
+ * @return number of miliseconds
+ */
+export const minutesToMiliseconds = (minutes = 5) => {
+	const parseMinutes = !validateNumber(minutes) || minutes < 1 ? 5 : minutes;
+	return parseMinutes * 60000;
 };

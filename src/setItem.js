@@ -1,5 +1,10 @@
-import { validateString, validateNumber, isRequired, invalidType } from './utils';
-import minutesToMiliseconds from './minutesToMiliseconds';
+import {
+	validateString,
+	validateNumber,
+	isRequired,
+	invalidType,
+	minutesToMiliseconds,
+} from './utils';
 
 /**
  * @name setItem
