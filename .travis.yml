@@ -17,4 +17,10 @@ jobs:
       if: branch = master
       script:
         - npm test
-        - npm build
+      before_deploy:
+        - npm run build
+      deploy:
+        provider: npm
+        email: $NPM_MAIL
+        api_key: $NPM_TOKEN
+        skip_clean: true
