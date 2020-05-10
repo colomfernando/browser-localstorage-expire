@@ -13,7 +13,7 @@ import {
  * @param {number} value - data to save in localstorage
  * @param {number} [expiry = 300000] - time of expiration
  * @description function for save data in localstorage
- * @example setItem() // 		setItem('data', [{ visa: 2 }], 50000);
+ * @example setItem() // 		setItem('data', [{ country: 2 }], 50000);
  */
 
 const setItem = (
