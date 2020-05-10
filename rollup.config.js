@@ -19,7 +19,6 @@ export default [
 				sourcemap: true,
 			},
 		],
-		external: ['axios'],
 		plugins: [
 			external(),
 			babel({
@@ -28,10 +27,7 @@ export default [
 				comments: false,
 				exclude: ['node_modules/**'],
 				presets: ['@babel/preset-env'],
-				plugins: [
-					'@babel/plugin-proposal-object-rest-spread',
-					'@babel/plugin-transform-runtime',
-				],
+				plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/plugin-transform-runtime'],
 			}),
 			resolve(),
 			commonjs(),
