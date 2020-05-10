@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import cache from '../src';
+import browserLocalstorage from '../src';
 
 describe('cache function', () => {
 	beforeEach(() => {
@@ -11,18 +11,18 @@ describe('cache function', () => {
 	});
 	describe('error', () => {
 		test('return error', () => {
-			const error = () => cache();
+			const error = () => browserLocalstorage();
 			expect(error).toThrowError('name localStorage is required');
 		});
 		test('return error with wrong arg', () => {
-			const error = () => cache([1]);
+			const error = () => browserLocalstorage([1]);
 			expect(error).toThrowError('key must be a valid string');
 		});
 	});
 
 	describe('cache', () => {
 		test('function instance', () => {
-			const localCache = cache('vtex');
+			const localCache = browserLocalstorage('vtex');
 			expect(localCache.set).toBeDefined();
 			expect(localCache.get).toBeDefined();
 			expect(localCache.set).toBeInstanceOf(Function);
@@ -32,17 +32,16 @@ describe('cache function', () => {
 	describe('cache setter and getter', () => {
 		test('setter', () => {
 			const name = 'vtex';
-			const keyStorage = 'vtex-installments';
-			const localCache = cache(name);
+			const localCache = browserLocalstorage(name);
 			localCache.set({ name: 1, lastName: 2 });
-			expect(localStorage.__STORE__[keyStorage]).toEqual(
+			expect(localStorage.__STORE__[name]).toEqual(
 				'{"value":{"name":1,"lastName":2},"expiry":1585989827}'
 			);
 		});
 
 		test('getter', () => {
 			const name = 'vtex';
-			const localCache = cache(name);
+			const localCache = browserLocalstorage(name);
 			localStorage.setItem(name, JSON.stringify({ expiry: 1585688410, value: [{ visa: 2 }] }));
 			const response = localCache.get();
 			expect(response).toBe(null);

@@ -3,15 +3,14 @@ import getItem from './getItem';
 import setItem from './setItem';
 
 /**
- * @module cache
- * @private
+ * @module browserLocalstorage
  * @param {string} key - key for set name for localstorage
  * @description function for manage cache from localstorage with expiration
- * @example const localCache = cache('vtex');
+ * @example const localCache = browserLocalstorage('data');
  * @returns function get and set
  */
 
-const cache = (key = isRequired('name localStorage')) => {
+const browserLocalstorage = (key = isRequired('name localStorage')) => {
 	if (!validateString(key)) invalidType('key', 'string');
 	return {
 		get: () => getItem(key),
@@ -19,4 +18,4 @@ const cache = (key = isRequired('name localStorage')) => {
 	};
 };
 
-export default cache;
+export default browserLocalstorage;
