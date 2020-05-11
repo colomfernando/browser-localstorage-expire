@@ -1,6 +1,6 @@
 {
 	"name": "browser-localstorage-expire",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "package for manage localstorage browser",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
