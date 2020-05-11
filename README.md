@@ -4,6 +4,8 @@
 version](https://img.shields.io/npm/v/browser-localstorage-expire.svg?style=flat-square)](https://www.npmjs.org/package/browser-localstorage-expire)
 [![Build
 Status](https://travis-ci.com/colomfernando/browser-localstorage-expire.svg?branch=master)](https://travis-ci.com/colomfernando/browser-localstorage-expire)
+[![Coverage
+Status](https://coveralls.io/repos/github/colomfernando/browser-localstorage-expire/badge.svg?branch=badges)](https://coveralls.io/github/colomfernando/browser-localstorage-expire?branch=badges)
 
 <a name="module_browserLocalstorage"></a>
 
