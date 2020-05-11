@@ -7,7 +7,7 @@
 	"browser": "dist/index.umd.js",
 	"scripts": {
 		"test": "jest",
-		"coveralls": "jest --coverage && coveralls < coverage/lcov.info",
+		"coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
 		"build-docs": "jsdoc2md --template README.hbs --files src/*.js > README.md",
 		"build": "rollup -c",
 		"lint": "lint-staged"
