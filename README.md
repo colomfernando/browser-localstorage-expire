@@ -1,12 +1,9 @@
 # browser-localStorage
 
-[![Build
-Status](https://travis-ci.com/colomfernando/browser-localstorage-expiry.svg?branch=master)](https://travis-ci.com/colomfernando/browser-localstorage)
-
 [![npm
-version](https://badge.fury.io/js/browser-localstorage-expire.svg)](https://badge.fury.io/js/browser-localstorage-expire)
-
-package localStorage
+version](https://img.shields.io/npm/v/browser-localstorage-expire.svg?style=flat-square)](https://www.npmjs.org/package/browser-localstorage-expire)
+[![Build
+Status](https://travis-ci.com/colomfernando/browser-localstorage-expire.svg?branch=master)](https://travis-ci.com/colomfernando/browser-localstorage-expire)
 
 <a name="module_browserLocalstorage"></a>
 
