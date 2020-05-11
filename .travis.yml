@@ -19,6 +19,8 @@ jobs:
         - npm test
       before_deploy:
         - npm run build
+      after_success:
+        - npm run coveralls
       deploy:
         provider: npm
         email: $NPM_MAIL
