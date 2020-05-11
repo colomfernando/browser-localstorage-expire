@@ -1,7 +1,7 @@
 # browser-localStorage
 
 [![Build
-Status](https://travis-ci.com/colomfernando/browser-localstorage.svg?branch=master)](https://travis-ci.com/colomfernando/browser-localstorage)
+Status](https://travis-ci.com/colomfernando/browser-localstorage-expiry.svg?branch=master)](https://travis-ci.com/colomfernando/browser-localstorage)
 
 https://img.shields.io/npm/v/browser-localstorage-expire
 
@@ -37,7 +37,7 @@ function for get data in localstorage
 
 **Example**  
 ```js
-setItem() // 		getItem('data') // [{ country: 2 }]
+getItem('data')
 ```
 <a name="module_browserLocalstorage..setItem"></a>
 
@@ -50,9 +50,9 @@ function for save data in localstorage
 | --- | --- | --- | --- |
 | name | <code>string</code> |  | name key for localstorage |
 | value | <code>number</code> |  | data to save in localstorage |
-| [expiry] | <code>number</code> | <code>5</code> | time of expiration in minutes |
+| [expiry] | <code>number</code> | <code>5</code> | time of expiration |
 
 **Example**  
 ```js
-setItem() // 		setItem('data', [{ country: 2 }], 5);
+setItem('data', [{ country: 2 }], 5);
 ```
