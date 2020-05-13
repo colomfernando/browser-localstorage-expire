@@ -36,7 +36,7 @@
 		"cache"
 	],
 	"author": "Fernando Colom",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/colomfernando/browser-localstorage-expire/issues"
 	},
