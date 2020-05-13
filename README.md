@@ -7,51 +7,64 @@ Status](https://travis-ci.com/colomfernando/browser-localstorage-expire.svg?bran
 [![Coverage
 Status](https://coveralls.io/repos/github/colomfernando/browser-localstorage-expire/badge.svg?branch=badges)](https://coveralls.io/github/colomfernando/browser-localstorage-expire?branch=badges)
 
-<a name="module_browserLocalstorage"></a>
+## Installation
 
-## browserLocalstorage ⇒
+```js
+npm i -S browser-localstorage-expire
+```
+
+## Usage
+
 function for manage cache from localstorage with expiration
 
 **Returns**: function get and set  
-**Example**  
+**Example**
+
 ```js
 const localCache = browserLocalstorage();
 ```
 
-* [browserLocalstorage](#module_browserLocalstorage) ⇒
-    * [~getItem](#module_browserLocalstorage..getItem) ⇒
-    * [~setItem](#module_browserLocalstorage..setItem)
+- [browserLocalstorage](#module_browserLocalstorage) ⇒
+  - [~getItem](#module_browserLocalstorage..getItem) ⇒
+  - [~setItem](#module_browserLocalstorage..setItem)
 
 <a name="module_browserLocalstorage..getItem"></a>
 
 ### browserLocalstorage~getItem ⇒
+
 function for get data in localstorage
 
 **Kind**: inner property of [<code>browserLocalstorage</code>](#module_browserLocalstorage)  
-**Returns**: data from localstorage  
+**Returns**: data from localstorage
 
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | name key for localstorage |
+| Param | Type                | Description               |
+| ----- | ------------------- | ------------------------- |
+| name  | <code>string</code> | name key for localstorage |
 
-**Example**  
+**Example**
+
 ```js
-getItem('data')
+const localCache = browserLocalstorage();
+localCache.localgetItem('data');
 ```
+
 <a name="module_browserLocalstorage..setItem"></a>
 
 ### browserLocalstorage~setItem
+
 function for save data in localstorage
 
-**Kind**: inner property of [<code>browserLocalstorage</code>](#module_browserLocalstorage)  
+**Kind**: inner property of [<code>browserLocalstorage</code>](#module_browserLocalstorage)
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| name | <code>string</code> |  | name key for localstorage |
-| value | <code>\*</code> |  | data to save in localstorage |
+| Param    | Type                | Default        | Description                   |
+| -------- | ------------------- | -------------- | ----------------------------- |
+| name     | <code>string</code> |                | name key for localstorage     |
+| value    | <code>\*</code>     |                | data to save in localstorage  |
 | [expiry] | <code>number</code> | <code>5</code> | time of expiration in minutes |
 
-**Example**  
+**Example**
+
 ```js
-setItem('data', [{ country: 2 }], 5);
+const localCache = browserLocalstorage();
+localCache.setItem('data', [{ country: 2 }], 5);
 ```
