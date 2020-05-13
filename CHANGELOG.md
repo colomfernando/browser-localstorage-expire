@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - files to npmignore
 
+### Changed
+
+- README documentation
+
 ## [1.4.0] - 2019-05-13
 
 ### Changed
