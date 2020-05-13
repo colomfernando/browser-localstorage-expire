@@ -8,6 +8,7 @@ coverage
 # tools
 .travis.yml
 rollup.config.js
+template-readme.hbs
 .babelrc
 .eslintignore
 .eslintrc

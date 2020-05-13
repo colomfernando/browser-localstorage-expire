@@ -8,7 +8,7 @@
 	"scripts": {
 		"test": "jest",
 		"coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-		"build-docs": "jsdoc2md --template README.hbs --files src/*.js > README.md",
+		"build-docs": "jsdoc2md --template template-readme.hbs --files src/*.js > README.md",
 		"build": "rollup -c",
 		"lint": "lint-staged"
 	},
