@@ -1,7 +1,10 @@
 {
-	"extends": ["airbnb-base", "prettier"],
-	"plugins": ["prettier", "jest"],
-	"parser": "babel-eslint",
+	"plugins": ["@typescript-eslint"],
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+ 	"parser": "@typescript-eslint/parser",
 	"rules": {
 		"prettier/prettier": "error"
 	},

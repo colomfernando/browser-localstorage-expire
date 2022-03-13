@@ -46,14 +46,14 @@ export const invalidType = (param = 'param', type = 'type') => {
 };
 
 /**
- * @name minutesToMiliseconds
+ * @name minutesToMilliseconds
  * @param {number} [minutes = 5]
  * @private
  * @description convert minutes to miliseconds
  * @example minutesToMiliseconds(10) // 600000
  * @return number of miliseconds
  */
-export const minutesToMiliseconds = (minutes = 5) => {
+export const minutesToMilliseconds = (minutes = 5) => {
 	const parseMinutes = !validateNumber(minutes) || minutes < 1 ? 5 : minutes;
 	return parseMinutes * 60000;
 };
