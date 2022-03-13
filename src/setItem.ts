@@ -10,7 +10,10 @@ import { minutesToMilliseconds } from './utils';
  * @example setItem() // 		setItem('data', [{ country: 2 }], 5);
  */
 
-const setItem = <T>(name: string, value: T, expiry = 5) => {
+const setItem = <T>(name: string, value: T, expiry = 5): void | null => {
+	if (!name) return null;
+	if (!value) return null;
+
 	const validExpiry = minutesToMilliseconds(expiry);
 
 	const item = {
