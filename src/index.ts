@@ -15,7 +15,7 @@ const browserLocalstorage = () => {
 		 * @param {string} name name key for localstorage
 		 * @description function for get data in localstorage
 		 * @example const localCache = browserLocalstorage();
-		 * localCache.localgetItem('data')
+		 * localCache.localGetItem('data')
 		 * @returns data from localstorage
 		 */
 		getItem,

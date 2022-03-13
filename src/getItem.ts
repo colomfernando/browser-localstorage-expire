@@ -1,5 +1,3 @@
-import { validateString, isRequired, invalidType } from './utils';
-
 /**
  * @name getItem
  * @private
@@ -9,8 +7,7 @@ import { validateString, isRequired, invalidType } from './utils';
  * @returns data from localstorage
  */
 
-const getItem = (name = isRequired('name localstorage')) => {
-	if (!validateString(name)) invalidType('name', 'string');
+const getItem = (name: string) => {
 	const itemStr = localStorage.getItem(name);
 	if (!itemStr) {
 		return null;
