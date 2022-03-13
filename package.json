@@ -4,6 +4,7 @@
 	"description": "package for manage localstorage browser",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
+	"types": "index.d.ts",
 	"browser": "dist/index.umd.js",
 	"scripts": {
 		"test": "jest",
