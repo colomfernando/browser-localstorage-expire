@@ -9,7 +9,7 @@ describe('cache function', () => {
 		jest.spyOn(global, 'Date').mockImplementation(() => mockDate as unknown as string);
 	});
 	describe('browserLocalstorage', () => {
-		test('function instance', () => {
+		it('function instance', () => {
 			const localCache = browserLocalstorage();
 			expect(localCache.setItem).toBeDefined();
 			expect(localCache.getItem).toBeDefined();
@@ -18,7 +18,7 @@ describe('cache function', () => {
 		});
 	});
 	describe('browserLocalstorage setter and getter', () => {
-		test('setter', () => {
+		it('setter', () => {
 			const name = 'vtex';
 			const localCache = browserLocalstorage();
 			localCache.setItem(name, { name: 1, lastName: 2 });
@@ -27,7 +27,7 @@ describe('cache function', () => {
 			);
 		});
 
-		test('getter', () => {
+		it('getter', () => {
 			const name = 'vtex';
 			const localCache = browserLocalstorage();
 			localStorage.setItem(name, JSON.stringify({ expiry: 1585688410, value: [{ visa: 2 }] }));
