@@ -103,4 +103,4 @@ typings/
 .tern-port
 
 # build folder
-build/
+dist/
