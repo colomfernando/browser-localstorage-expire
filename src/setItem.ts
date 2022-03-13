@@ -11,9 +11,6 @@ import { minutesToMilliseconds } from './utils';
  */
 
 const setItem = <T>(name: string, value: T, expiry = 5): void | null => {
-	if (!name) return null;
-	if (!value) return null;
-
 	const validExpiry = minutesToMilliseconds(expiry);
 
 	const item = {

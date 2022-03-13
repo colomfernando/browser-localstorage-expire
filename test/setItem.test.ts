@@ -9,23 +9,6 @@ describe('setItem function', () => {
 		}));
 	});
 
-	describe('Errors', () => {
-		test('return Error without name', () => {
-			const error = () => setItem();
-			expect(error).toThrowError('name for localStorage is required');
-		});
-
-		test('return Error without value', () => {
-			const error = () => setItem('IC');
-			expect(error).toThrowError('value for localStorage is required');
-		});
-
-		test('return Error with wrong name', () => {
-			const error = () => setItem([1], { data: 1 });
-			expect(error).toThrowError('name must be a valid string');
-		});
-	});
-
 	describe('localStorage', () => {
 		test('have been called twice', () => {
 			setItem('vtex', [1, 2]);

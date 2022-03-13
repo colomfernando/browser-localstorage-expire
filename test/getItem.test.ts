@@ -18,15 +18,6 @@ describe('getItem localStorage function', () => {
 		expect(localStorage.getItem).toHaveBeenCalledTimes(1);
 	});
 
-	test('return with error name required', () => {
-		const error = () => getItem();
-		expect(error).toThrowError('name localstorage is required');
-	});
-	test('return with error name required', () => {
-		const error = () => getItem(2);
-		expect(error).toThrowError('name must be a valid string');
-	});
-
 	test('return with data', () => {
 		localStorage.setItem(
 			'vtex-installments',
