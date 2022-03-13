@@ -4,8 +4,7 @@
 	"description": "package for manage localstorage browser",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
-	"types": "index.d.ts",
-	"browser": "dist/index.umd.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"test": "jest",
 		"build-docs": "jsdoc2md --template template-readme.hbs --files src/*.js > README.md",
