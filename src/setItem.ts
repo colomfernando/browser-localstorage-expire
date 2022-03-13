@@ -1,10 +1,4 @@
-import {
-	validateString,
-	validateNumber,
-	isRequired,
-	invalidType,
-	minutesToMiliseconds,
-} from './utils';
+import { value minutesToMilliseconds } from './utils';
 
 /**
  * @name setItem
@@ -16,13 +10,8 @@ import {
  * @example setItem() // 		setItem('data', [{ country: 2 }], 5);
  */
 
-const setItem = (
-	name = isRequired('name for localStorage'),
-	value = isRequired('value for localStorage'),
-	expiry = 5
-) => {
-	if (!validateString(name)) invalidType('name', 'string');
-	const validExpiry = !validateNumber(expiry) ? 60000 : minutesToMiliseconds(expiry);
+const setItem = (name: string, value: any, expiry: number = 5) => {
+	const validExpiry = minutesToMilliseconds(expiry);
 	const item = {
 		value,
 		expiry: new Date().getTime() + validExpiry,
