@@ -1,14 +1,14 @@
 module.exports = {
 	preset: 'ts-jest',
+	roots: ['<rootDir>'],
 	testEnvironment: 'node',
 	resetMocks: false,
 	setupFiles: ['jest-localstorage-mock'],
 	collectCoverage: true,
-	verbose: false,
+	verbose: true,
 	coverageDirectory: 'coverage',
-	collectCoverageFrom: ['src/**/*.{ts, json}'],
 	coveragePathIgnorePatterns: ['/node_modules/'],
-	coverageReporters: ['text', 'html', 'lcov'],
+	coverageReporters: ['text', 'html'],
 	coverageThreshold: {
 		global: {
 			branches: 100,
@@ -17,8 +17,8 @@ module.exports = {
 			statements: 100,
 		},
 	},
-	testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
+	collectCoverageFrom: ['src/**/*.ts', '!**/node_modules/**'],
+	testMatch: ['**/?(*.)+(spec|test).ts?(x)'],
 	testPathIgnorePatterns: ['\\\\node_modules\\\\'],
 	transformIgnorePatterns: ['<rootDir>/node_modules/'],
-	moduleDirectories: ['node_modules', 'src'],
 };
