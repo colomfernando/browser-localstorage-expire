@@ -7,7 +7,6 @@
 	"browser": "dist/index.umd.js",
 	"scripts": {
 		"test": "jest",
-		"coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
 		"build-docs": "jsdoc2md --template template-readme.hbs --files src/*.js > README.md",
 		"build": "rollup -c",
 		"lint": "lint-staged"
@@ -52,7 +51,6 @@
 		"babel-core": "^6.26.3",
 		"babel-eslint": "^10.1.0",
 		"babel-jest": "^25.5.1",
-		"coveralls": "^3.1.0",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb-base": "^14.1.0",
 		"eslint-config-prettier": "^6.11.0",
