@@ -7,10 +7,7 @@ describe('getItem localStorage function', () => {
 
 		// 03/31/2020 @ 9:10pm (UTC)
 		const mockDate = new Date(1585689000);
-		jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
-		global.Date = jest.fn(() => ({
-			getTime: () => 1585689000,
-		}));
+		jest.spyOn(global, 'Date').mockImplementation(() => mockDate as unknown as string);
 	});
 
 	test('have been called', () => {

@@ -13,6 +13,7 @@ const getItem = <T>(name: string): T | null => {
 		return null;
 	}
 	const item = JSON.parse(itemStr);
+
 	if (item.expiry < new Date().getTime()) {
 		localStorage.removeItem(name);
 		return null;

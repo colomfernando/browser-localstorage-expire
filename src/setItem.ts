@@ -1,4 +1,4 @@
-import { minutesToMilliseconds } from './utils';
+import { minutesToMilliseconds, validateNumber } from './utils';
 
 /**
  * @name setItem
@@ -11,12 +11,13 @@ import { minutesToMilliseconds } from './utils';
  */
 
 const setItem = <T>(name: string, value: T, expiry = 5): void | null => {
-	const validExpiry = minutesToMilliseconds(expiry);
+	const validExpiry = !validateNumber(expiry) ? 60000 : minutesToMilliseconds(expiry);
 
 	const item = {
 		value,
 		expiry: new Date().getTime() + validExpiry,
 	};
+
 	localStorage.setItem(name, JSON.stringify(item));
 };
 

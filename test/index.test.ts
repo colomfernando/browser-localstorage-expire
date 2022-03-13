@@ -4,10 +4,9 @@ import browserLocalstorage from '../src';
 describe('cache function', () => {
 	beforeEach(() => {
 		localStorage.clear();
-		global.Date.now = jest.fn(() => 1585689827);
-		global.Date = jest.fn(() => ({
-			getTime: () => 1585689827,
-		}));
+		// 03/31/2020 @ 9:10pm (UTC)
+		const mockDate = new Date(1585689000);
+		jest.spyOn(global, 'Date').mockImplementation(() => mockDate as unknown as string);
 	});
 	describe('browserLocalstorage', () => {
 		test('function instance', () => {
@@ -24,7 +23,7 @@ describe('cache function', () => {
 			const localCache = browserLocalstorage();
 			localCache.setItem(name, { name: 1, lastName: 2 });
 			expect(localStorage.__STORE__[name]).toEqual(
-				'{"value":{"name":1,"lastName":2},"expiry":1585989827}'
+				'{"value":{"name":1,"lastName":2},"expiry":1585989000}'
 			);
 		});
 

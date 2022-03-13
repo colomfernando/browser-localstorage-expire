@@ -4,19 +4,19 @@ import setItem from '../src/setItem';
 describe('setItem function', () => {
 	beforeEach(() => {
 		localStorage.clear();
-		global.Date = jest.fn(() => ({
-			getTime: () => 19585629827,
-		}));
+		// 03/31/2020 @ 9:10pm (UTC)
+		const mockDate = new Date(1585689000);
+		jest.spyOn(global, 'Date').mockImplementation(() => mockDate as unknown as string);
 	});
 
 	describe('localStorage', () => {
-		test('have been called twice', () => {
+		it('have been called twice', () => {
 			setItem('vtex', [1, 2]);
 			setItem('ic', [1, 2, 3, 4]);
 			expect(localStorage.setItem).toHaveBeenCalledTimes(2);
 		});
 
-		test('have correct object keys', () => {
+		it('have correct object keys', () => {
 			const name = 'vtex';
 			setItem(name, [{ visa: 2 }]);
 			const item = JSON.parse(localStorage.__STORE__[name]);
@@ -24,35 +24,35 @@ describe('setItem function', () => {
 			expect(item).toHaveProperty('expiry');
 		});
 
-		test('have correct object', () => {
+		it('have correct object', () => {
 			const name = 'vtex';
 			setItem(name, [{ visa: 2 }]);
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			const response = {
 				value: [{ visa: 2 }],
-				expiry: 19585929827,
+				expiry: 1585989000,
 			};
 			expect(item).toEqual(response);
 		});
 
-		test('have correct object with wrong expiry', () => {
+		it('have correct object with wrong expiry', () => {
 			const name = 'vtex';
 			setItem(name, [{ visa: 2 }], NaN);
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			const response = {
 				value: [{ visa: 2 }],
-				expiry: 19585689827,
+				expiry: 1585749000,
 			};
 			expect(item).toEqual(response);
 		});
 
-		test('have correct object', () => {
+		it('have correct object', () => {
 			const name = 'vtex';
 			setItem(name, [{ visa: 2 }], 5);
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			const response = {
 				value: [{ visa: 2 }],
-				expiry: 19585929827,
+				expiry: 1585989000,
 			};
 			expect(item).toEqual(response);
 		});
