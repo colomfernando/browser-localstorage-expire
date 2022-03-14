@@ -1,4 +1,4 @@
-import { minutesToMilliseconds } from '../src/utils';
+import { minutesToMilliseconds } from './utils';
 
 describe('utils::minutesToMilliseconds', () => {
 	it('returns default minutes', () => {

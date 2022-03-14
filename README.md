@@ -15,47 +15,48 @@ yarn add browser-localstorage-expire
 ```
 
 ## Usage
-function for manage cache from localstorage with expiration
+<p>function for manage cache from localstorage with expiration</p>
 
-**Returns**: function get and set  
+**Returns**: <p>function get and set</p>  
 **Example**  
 ```js
 const localCache = browserLocalstorage();
 ```
 
 * [browserLocalstorage](#module_browserLocalstorage) ⇒
-    * [~getItem](#module_browserLocalstorage..getItem) ⇒
-    * [~setItem](#module_browserLocalstorage..setItem)
+    * [~getItem(name)](#module_browserLocalstorage..getItem) ⇒
+    * [~setItem(name, value, [expiry])](#module_browserLocalstorage..setItem) ⇒
 
 <a name="module_browserLocalstorage..getItem"></a>
 
-### browserLocalstorage~getItem ⇒
-function for get data in localstorage
+### browserLocalstorage~getItem(name) ⇒
+<p>function for get data in localstorage</p>
 
-**Kind**: inner property of [<code>browserLocalstorage</code>](#module_browserLocalstorage)  
-**Returns**: data from localstorage  
+**Kind**: inner method of [<code>browserLocalstorage</code>](#module_browserLocalstorage)  
+**Returns**: <p>data from localstorage</p>  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | name key for localstorage |
+| name | <code>string</code> | <p>name key for localstorage</p> |
 
 **Example**  
 ```js
 const localCache = browserLocalstorage();
-localCache.localgetItem('data')
+localCache.localGetItem('data')
 ```
 <a name="module_browserLocalstorage..setItem"></a>
 
-### browserLocalstorage~setItem
-function for save data in localstorage
+### browserLocalstorage~setItem(name, value, [expiry]) ⇒
+<p>function for save data in localstorage</p>
 
-**Kind**: inner property of [<code>browserLocalstorage</code>](#module_browserLocalstorage)  
+**Kind**: inner method of [<code>browserLocalstorage</code>](#module_browserLocalstorage)  
+**Returns**: <p>void</p>  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| name | <code>string</code> |  | name key for localstorage |
-| value | <code>\*</code> |  | data to save in localstorage |
-| [expiry] | <code>number</code> | <code>5</code> | time of expiration in minutes |
+| name | <code>string</code> |  | <p>name key for localstorage</p> |
+| value | <code>T</code> |  | <p>data to save in localstorage</p> |
+| [expiry] | <code>number</code> | <code>5</code> | <p>time of expiration in minutes</p> |
 
 **Example**  
 ```js

@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import setItem from '../src/setItem';
+import setItem from '.';
 
 describe('setItem function', () => {
 	beforeEach(() => {
@@ -41,7 +41,7 @@ describe('setItem function', () => {
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			const response = {
 				value: [{ visa: 2 }],
-				expiry: 1585749000,
+				expiry: 1585689005,
 			};
 			expect(item).toEqual(response);
 		});

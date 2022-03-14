@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import getItem from '../src/getItem';
+import getItem from '.';
 
 describe('getItem localStorage function', () => {
 	beforeEach(() => {

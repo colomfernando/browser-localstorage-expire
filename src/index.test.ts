@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import browserLocalstorage from '../src';
+import browserLocalstorage from '.';
 
 describe('cache function', () => {
 	beforeEach(() => {

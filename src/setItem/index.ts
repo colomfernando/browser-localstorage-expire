@@ -1,4 +1,4 @@
-import { minutesToMilliseconds, validateNumber } from './utils';
+import { minutesToMilliseconds } from '../utils';
 
 /**
  * @name setItem
@@ -11,7 +11,7 @@ import { minutesToMilliseconds, validateNumber } from './utils';
  */
 
 const setItem = <T>(name: string, value: T, expiry = 5): void | null => {
-	const validExpiry = !validateNumber(expiry) ? 60000 : minutesToMilliseconds(expiry);
+	const validExpiry = Number.isNaN(Number(expiry)) ? 5 : minutesToMilliseconds(expiry);
 
 	const item = {
 		value,
