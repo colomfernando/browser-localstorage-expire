@@ -3,7 +3,7 @@
 	"version": "1.6.0",
 	"description": "package for manage localstorage browser",
 	"main": "dist/index.js",
-	"module": "dist/index.esm.js",
+	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist/**"
@@ -11,7 +11,7 @@
 	"scripts": {
 		"test": "jest",
 		"docs": "jsdoc2md --template template-readme.hbs --configure ./jsdoc2md.json --files src/index.ts > README.md",
-		"build": "rimraf dist && tsc && rollup -c rollup.config.js",
+		"build": "tsc",
 		"lint": "lint-staged"
 	},
 	"husky": {
