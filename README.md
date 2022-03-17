@@ -15,9 +15,9 @@ yarn add browser-localstorage-expire
 ```
 
 ## Usage
-<p>function for manage cache from localstorage with expiration</p>
+<p>module for manage cache from localstorage with expiration</p>
 
-**Returns**: <p>function get and set</p>  
+**Returns**: <p>methods getItem and saveItem</p>  
 **Example**  
 ```js
 const localCache = browserLocalstorage();
@@ -55,7 +55,7 @@ localCache.localGetItem('data')
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | name | <code>string</code> |  | <p>name key for localstorage</p> |
-| value | <code>T</code> |  | <p>data to save in localstorage</p> |
+| value | <code>\*</code> |  | <p>data to save in localstorage</p> |
 | [expiry] | <code>number</code> | <code>5</code> | <p>time of expiration in minutes</p> |
 
 **Example**  
