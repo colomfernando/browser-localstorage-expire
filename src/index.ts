@@ -3,29 +3,32 @@ import setItem from './setItem';
 
 /**
  * @module browserLocalstorage
- * @description function for manage cache from localstorage with expiration
+ * @description module for manage cache from localstorage with expiration
  * @example const localCache = browserLocalstorage();
- * @returns function get and set
+ * @returns methods getItem and saveItem
  */
 
 const browserLocalstorage = () => {
 	return {
 		/**
-		 * @name getItem
-		 * @param {string} name name key for localstorage
+		 * @function getItem
+		 * @param {string} name - name key for localstorage
 		 * @description function for get data in localstorage
-		 * @example const localCache = browserLocalstorage();
-		 * localCache.localgetItem('data')
 		 * @returns data from localstorage
+		 * @example
+		 * const localCache = browserLocalstorage();
+		 * localCache.localGetItem('data')
 		 */
 		getItem,
 		/**
-		 * @name setItem
+		 * @function setItem
 		 * @param {string} name name key for localstorage
 		 * @param {*} value - data to save in localstorage
 		 * @param {number} [expiry = 5] - time of expiration in minutes
 		 * @description function for save data in localstorage
-		 * @example const localCache = browserLocalstorage();
+		 * @returns void
+		 * @example
+		 * const localCache = browserLocalstorage();
 		 * localCache.setItem('data', [{ country: 2 }], 5);
 		 */
 		setItem,
