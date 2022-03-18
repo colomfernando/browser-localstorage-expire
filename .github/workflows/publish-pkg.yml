@@ -1,5 +1,7 @@
 name: publish-pkg
-on: [push]
+on:
+  release:
+  types: [create]
 jobs:
   test-action:
     runs-on: ubuntu-latest
@@ -8,4 +10,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: echo test
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
