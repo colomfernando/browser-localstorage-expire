@@ -1,7 +1,7 @@
 name: publish-pkg
 on:
   release:
-  types: [create]
+    types: [create]
 jobs:
   test-action:
     runs-on: ubuntu-latest
