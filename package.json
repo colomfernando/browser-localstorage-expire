@@ -13,7 +13,7 @@
 		"docs": "jsdoc2md --template template-readme.hbs --configure ./jsdoc2md.json --files src/index.ts > README.md",
 		"build": "tsc",
 		"lint": "lint-staged",
-		"prepare": "npm run build"
+		"prepublish": "npm run build"
 	},
 	"husky": {
 		"hooks": {

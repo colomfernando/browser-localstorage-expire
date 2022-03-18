@@ -1,7 +1,7 @@
 name: publish-pkg
 on:
-  release:
-    types: [create]
+  push:
+    tags: ['*']
 jobs:
   test-action:
     runs-on: ubuntu-latest
@@ -11,7 +11,8 @@ jobs:
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
+      - run: npm test
       - run: yarn
-      - run: yarn publish
+      - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
