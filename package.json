@@ -11,7 +11,7 @@
 	"scripts": {
 		"test": "jest",
 		"docs": "jsdoc2md --template template-readme.hbs --configure ./jsdoc2md.json --files src/index.ts > README.md",
-		"build": "npm run docs && tsc",
+		"build": "tsc",
 		"lint": "lint-staged",
 		"prepare": "npm run build"
 	},
