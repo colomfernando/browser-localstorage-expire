@@ -7,7 +7,7 @@
  * @returns data from localstorage
  */
 
-const getItem = (name: string): unknown | null => {
+const getItem = <T>(name: string): T | unknown | null => {
 	const itemStr = localStorage.getItem(name);
 	if (!itemStr) {
 		return null;

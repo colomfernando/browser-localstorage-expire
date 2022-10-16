@@ -19,7 +19,7 @@ describe('cache function', () => {
 	});
 	describe('browserLocalstorage setter and getter', () => {
 		it('setter', () => {
-			const name = 'vtex';
+			const name = 'test';
 			const localCache = browserLocalstorage();
 			localCache.setItem(name, { name: 1, lastName: 2 });
 			expect(localStorage.__STORE__[name]).toEqual(
@@ -28,7 +28,7 @@ describe('cache function', () => {
 		});
 
 		it('getter', () => {
-			const name = 'vtex';
+			const name = 'test';
 			const localCache = browserLocalstorage();
 			localStorage.setItem(name, JSON.stringify({ expiry: 1585688410, value: [{ visa: 2 }] }));
 			const response = localCache.getItem(name);

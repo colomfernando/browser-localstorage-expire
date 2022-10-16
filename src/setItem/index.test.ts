@@ -11,13 +11,13 @@ describe('setItem function', () => {
 
 	describe('localStorage', () => {
 		it('have been called twice', () => {
-			setItem('vtex', [1, 2]);
+			setItem('test', [1, 2]);
 			setItem('ic', [1, 2, 3, 4]);
 			expect(localStorage.setItem).toHaveBeenCalledTimes(2);
 		});
 
 		it('have correct object keys', () => {
-			const name = 'vtex';
+			const name = 'test';
 			setItem(name, [{ visa: 2 }]);
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			expect(item).toHaveProperty('value');
@@ -25,7 +25,7 @@ describe('setItem function', () => {
 		});
 
 		it('have correct object', () => {
-			const name = 'vtex';
+			const name = 'test';
 			setItem(name, [{ visa: 2 }]);
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			const response = {
@@ -36,7 +36,7 @@ describe('setItem function', () => {
 		});
 
 		it('have correct object with wrong expiry', () => {
-			const name = 'vtex';
+			const name = 'test';
 			setItem(name, [{ visa: 2 }], NaN);
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			const response = {
@@ -47,7 +47,7 @@ describe('setItem function', () => {
 		});
 
 		it('have correct object', () => {
-			const name = 'vtex';
+			const name = 'test';
 			setItem(name, [{ visa: 2 }], 5);
 			const item = JSON.parse(localStorage.__STORE__[name]);
 			const response = {
