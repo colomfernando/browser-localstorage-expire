@@ -11,29 +11,29 @@ describe('getItem localStorage function', () => {
 	});
 
 	it('have been called', () => {
-		getItem('vtex');
+		getItem('test');
 		expect(localStorage.getItem).toHaveBeenCalledTimes(1);
 	});
 
 	it('return with data', () => {
 		localStorage.setItem(
-			'vtex-installments',
+			'test-installments',
 			JSON.stringify({ expiry: 1585689000, value: [{ visa: 2 }] })
 		);
-		const item = getItem('vtex-installments');
+		const item = getItem('test-installments');
 		expect(item).toEqual([{ visa: 2 }]);
 	});
 
 	it('return null for no match name', () => {
-		const item = getItem('vtex');
+		const item = getItem('test');
 		expect(item).toBe(null);
 	});
 
 	it('return null of expire localStorage', () => {
 		// 03/31/2020 @ 9:00pm (UTC) expiry
-		const name = 'vtex';
+		const name = 'test';
 		localStorage.setItem(name, JSON.stringify({ expiry: 1585688410, value: [{ visa: 2 }] }));
-		const item = getItem('vtex');
+		const item = getItem('test');
 		expect(item).toBe(null);
 	});
 });
